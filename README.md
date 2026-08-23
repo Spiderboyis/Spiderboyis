@@ -1,5 +1,6 @@
 # 💫 About Me:
-🔭 I’m currently working on [Tagzzs](https://tagzzs.com)<br><br>🌱 I’m currently learning AI/ML<br><br>👨‍💻 All of my projects are available at [Portfolio](https://www.spiderboyis.me/)<br><br>📫 How to reach me harshitmathur88@gmail.com<br><br>📄 Know about my experiences [Resume]([https://drive.google.com/file/d/1owi9j7pQ4X5gZf_cPoCkeyany0iAlnth/view?usp=sharing](https://drive.google.com/file/d/1pAlo-Mm5I1Quj0EQ4IKBKXMC4Drohtrm/view?usp=sharing)
+🔭 I’m currently working on [Tagzzs](https://tagzzs.com)<br><br>🌱 I’m currently learning AI/ML<br><br>👨‍💻 All of my projects are available at [Portfolio](https://www.spiderboyis.me/)<br><br>📫 How to reach me harshitmathur88@gmail.com<br><br>📄 Know about my experiences [Resume](https://drive.google.com/file/d/1pAlo-Mm5I1Quj0EQ4IKBKXMC4Drohtrm/view?usp=sharing)
+
 
 
 ## 🌐 Socials:
