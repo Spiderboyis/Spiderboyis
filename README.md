@@ -101,16 +101,11 @@ const harshit = {
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=Spiderboyis&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0f0c29&title_color=24c6dc&icon_color=7C3AED&text_color=c9d1d9" />
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Spiderboyis&layout=compact&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0f0c29&title_color=24c6dc&text_color=c9d1d9" />
-
-<br/>
-
 <img src="https://streak-stats.demolab.com?user=Spiderboyis&theme=tokyonight&hide_border=true&background=0f0c29&ring=24c6dc&fire=7C3AED&currStreakLabel=24c6dc" />
 
-<br/>
+<br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Spiderboyis&theme=tokyo-night&bg_color=0f0c29&color=24c6dc&line=7C3AED&point=ffffff&area=true&area_color=302b63&hide_border=true&radius=10" width="100%" />
+<img src="https://raw.githubusercontent.com/Spiderboyis/Spiderboyis/main/github-metrics.svg" alt="GitHub metrics" width="100%" />
 
 </div>
 
@@ -126,17 +121,6 @@ const harshit = {
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Spiderboyis/Spiderboyis/output/github-contribution-grid-snake.svg" />
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/Spiderboyis/Spiderboyis/output/github-contribution-grid-snake-dark.svg" />
 </picture>
-
-</div>
-
-<br/>
-
-<!-- ═══════════════ TROPHIES ═══════════════ -->
-## 🏆 &nbsp;Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=Spiderboyis&theme=tokyonight&no-frame=true&no-bg=true&margin-w=12&column=7" />
 
 </div>
 
