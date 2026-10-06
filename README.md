@@ -7,7 +7,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-1a1b27?style=flat-square&logo=vercel&logoColor=7AA2F7)](https://spiderboyis.vercel.app/)
 [![Email](https://img.shields.io/badge/Email-1a1b27?style=flat-square&logo=gmail&logoColor=7AA2F7)](mailto:harshitmathur88@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-1a1b27?style=flat-square&logo=linkedin&logoColor=7AA2F7)](https://linkedin.com/in/harshitmathur03)
-[![Resume](https://img.shields.io/badge/Resume-1a1b27?style=flat-square&logo=googledrive&logoColor=7AA2F7)](https://drive.google.com/file/d/1owi9j7pQ4X5gZf_cPoCkeyany0iAlnth/view?usp=sharing)
+[![Resume](https://img.shields.io/badge/Resume-1a1b27?style=flat-square&logo=googledrive&logoColor=7AA2F7)](https://drive.google.com/file/d/16q3oG-jnatcv8OK1dFvs3YHSDGiGZrGe/view?usp=sharing)
 
 </div>
 
