@@ -1,130 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="100%">
-  <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="canvas-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="50%" stop-color="#0d1322" />
-      <stop offset="100%" stop-color="#090d16" />
-    </linearGradient>
+<svg viewBox="0 0 1000 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Harshit Mathur — Full-Stack Architect &amp; Founding Member">
+  <rect width="1000" height="340" fill="#090d16"/>
 
-    <!-- Glass Rim Gradient -->
-    <linearGradient id="glass-rim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
-      <stop offset="25%" stop-color="#818cf8" stop-opacity="0.2" />
-      <stop offset="70%" stop-color="#c084fc" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.4" />
-    </linearGradient>
+  <!-- Top Animated Rule -->
+  <line x1="48" y1="52" x2="952" y2="52" stroke="#30363d" stroke-width="1" stroke-dasharray="1000" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.6 0 0.2 1"/>
+  </line>
 
-    <!-- Name Text Gradient -->
-    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="60%" stop-color="#f1f5f9" />
-      <stop offset="100%" stop-color="#93c5fd" />
-    </linearGradient>
-
-    <!-- Accent Pill Gradient -->
-    <linearGradient id="pill-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.1" />
-    </linearGradient>
-
-    <!-- Ambient Mesh Filter -->
-    <filter id="aurora-blur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="45" result="blur" />
-    </filter>
-
-    <!-- Subtle Dot Grid Pattern -->
-    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.06" />
-    </pattern>
-  </defs>
-
-  <!-- Container Box -->
-  <rect x="1" y="1" width="958" height="258" rx="16" fill="url(#canvas-bg)" stroke="url(#glass-rim)" stroke-width="1.2" />
-
-  <!-- Ambient Glowing Aurora Orbs (Breathing Animation) -->
-  <g filter="url(#aurora-blur)" opacity="0.65">
-    <!-- Cyan Orb Top-Left -->
-    <circle cx="160" cy="50" r="120" fill="#06b6d4">
-      <animate attributeName="opacity" values="0.35;0.65;0.35" dur="7s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="160;190;160" dur="11s" repeatCount="indefinite" />
-    </circle>
-    <!-- Indigo/Violet Orb Bottom-Right -->
-    <circle cx="820" cy="200" r="140" fill="#6366f1">
-      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="9s" repeatCount="indefinite" />
-      <animate attributeName="cy" values="200;170;200" dur="13s" repeatCount="indefinite" />
-    </circle>
-    <!-- Purple Orb Center -->
-    <circle cx="480" cy="130" r="90" fill="#a855f7">
-      <animate attributeName="opacity" values="0.2;0.45;0.2" dur="8s" repeatCount="indefinite" />
-      <animate attributeName="r" values="90;110;90" dur="10s" repeatCount="indefinite" />
-    </circle>
+  <!-- Top Metadata Header -->
+  <g>
+    <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.2s" fill="freeze"/>
+    <text font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8b949e" x="48" y="38" font-size="11" letter-spacing="3.5">DOSSIER — INDEX Nº 001</text>
+    <text font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8b949e" x="952" y="38" font-size="11" letter-spacing="3.5" text-anchor="end">CHENNAI, IN — 13.08° N • SRM IST</text>
   </g>
 
-  <!-- Dot Grid Texture Overlay -->
-  <rect x="2" y="2" width="956" height="256" rx="15" fill="url(#dot-grid)" />
-
-  <!-- Inner Ambient Frosted Glass Shimmer Line -->
-  <line x1="40" y1="2" x2="920" y2="2" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
-
-  <!-- ================= CONTENT ================= -->
-
-  <!-- Top Pill Badge: Co-Founder & Live Platforms -->
-  <g transform="translate(48, 36)">
-    <rect x="0" y="0" width="310" height="26" rx="13" fill="url(#pill-grad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
-    <!-- Pulsing Cyan Dot -->
-    <circle cx="14" cy="13" r="4" fill="#38bdf8">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="14" cy="13" r="7" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.6">
-      <animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
-    </circle>
-    <text x="28" y="17" fill="#bae6fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.3">Co-Founder • Shipping Tagzzs &amp; DecayState</text>
+  <!-- Main Identity Name -->
+  <g>
+    <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="0.35s" fill="freeze"/>
+    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="46" y="146" font-size="64" font-weight="700" letter-spacing="-1.5">Harshit Mathur</text>
   </g>
 
-  <!-- Live Status Badge Top-Right -->
-  <g transform="translate(770, 36)">
-    <rect x="0" y="0" width="142" height="26" rx="13" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
-    <circle cx="14" cy="13" r="3.5" fill="#34d399" />
-    <text x="26" y="17" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">Open to Connect</text>
+  <!-- Subtitle -->
+  <g>
+    <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.55s" fill="freeze"/>
+    <text fill="#8b949e" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="48" y="184" font-size="17">Full-Stack Architect &amp; Founding Member — Chennai, India.</text>
   </g>
 
-  <!-- Main Name Title -->
-  <text x="48" y="112" fill="url(#name-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.8">Harshit Mathur</text>
+  <!-- Focus Details -->
+  <g>
+    <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.75s" fill="freeze"/>
+    <text fill="#7d8590" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="48" y="238" font-size="12" letter-spacing="1">focus   ▸</text>
+    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="136" y="238" font-size="12" letter-spacing="0.5">full-stack systems · AI memory layers · applied computer vision · astrophysics DL</text>
 
-  <!-- Primary Subtitle / Mission -->
-  <text x="48" y="146" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400">
-    <tspan fill="#e2e8f0" font-weight="600">Full-Stack Architect &amp; Founder</tspan> based in Chennai · Engineering AI memory layers &amp; strict protocols
-  </text>
+    <text fill="#7d8590" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="48" y="264" font-size="12" letter-spacing="1">status  ▸</text>
+    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="136" y="264" font-size="12" letter-spacing="0.5">Founding Member @ Tagzzs &amp; DecayState · B.Tech ECE (Data Sciences) @ SRM IST</text>
 
-  <!-- Credential Badges Row -->
-  <g transform="translate(48, 178)">
-    <!-- Badge 1: SRM IST Academic -->
-    <g>
-      <rect x="0" y="0" width="225" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
-      <text x="12" y="18" fill="#cbd5e1" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">SRM IST • B.Tech ECE (Data)</text>
-    </g>
-
-    <!-- Badge 2: AI & Computer Vision -->
-    <g transform="translate(235, 0)">
-      <rect x="0" y="0" width="205" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
-      <text x="12" y="18" fill="#cbd5e1" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">AI/ML &amp; Computer Vision</text>
-    </g>
-
-    <!-- Badge 3: 3x Hackathon Builder -->
-    <g transform="translate(450, 0)">
-      <rect x="0" y="0" width="165" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
-      <text x="12" y="18" fill="#cbd5e1" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">3x Hackathon Builder</text>
-    </g>
-
-    <!-- Badge 4: Core Tech Stack -->
-    <g transform="translate(625, 0)">
-      <rect x="0" y="0" width="237" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
-      <text x="12" y="18" fill="#38bdf8" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">Next.js · FastAPI · PyTorch</text>
-    </g>
+    <text fill="#58a6ff" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="48" y="290" font-size="12" letter-spacing="1">connect ▸</text>
+    <text fill="#58a6ff" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="136" y="290" font-size="12" letter-spacing="0.5">open to high-impact founding roles · systems engineering · research</text>
   </g>
 
-  <!-- Bottom Accent Highlight Line -->
-  <line x1="48" y1="228" x2="912" y2="228" stroke="url(#glass-rim)" stroke-width="1" stroke-opacity="0.4" />
+  <!-- Bottom Animated Rule -->
+  <line x1="48" y1="316" x2="952" y2="316" stroke="#30363d" stroke-width="1" stroke-dasharray="1000" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.2s" begin="0.85s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.6 0 0.2 1"/>
+  </line>
 </svg>

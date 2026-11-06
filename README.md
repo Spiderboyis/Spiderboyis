@@ -1,93 +1,72 @@
 <div align="center">
 
-[![Harshit Mathur - Full-Stack Architect & Co-Founder](assets/hero-banner.svg)](https://spiderboyis.vercel.app/)
+<a href="https://spiderboyis.vercel.app/">
+  <img src="assets/hero-banner.svg" alt="Harshit Mathur — Full-Stack Architect &amp; Founding Member" width="100%">
+</a>
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-090d16?style=for-the-badge&logo=vercel&logoColor=00f0ff)](https://spiderboyis.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-090d16?style=for-the-badge&logo=linkedin&logoColor=7aa2f7)](https://linkedin.com/in/harshitmathur03)
-[![Email](https://img.shields.io/badge/Email-090d16?style=for-the-badge&logo=gmail&logoColor=f7768e)](mailto:harshitmathur88@gmail.com)
-[![Resume](https://img.shields.io/badge/Resume-090d16?style=for-the-badge&logo=googledrive&logoColor=bb9af7)](https://drive.google.com/file/d/16q3oG-jnatcv8OK1dFvs3YHSDGiGZrGe/view?usp=sharing)
-[![GitHub](https://img.shields.io/badge/GitHub-090d16?style=for-the-badge&logo=github&logoColor=c0caf5)](https://github.com/Spiderboyis)
-[![X (Twitter)](https://img.shields.io/badge/X-090d16?style=for-the-badge&logo=x&logoColor=ffffff)](https://x.com/spiderboyis)
+<a href="https://spiderboyis.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-0d1117?style=flat-square&logo=vercel&logoColor=58a6ff" alt="Portfolio"/></a>
+<a href="https://linkedin.com/in/harshitmathur03"><img src="https://img.shields.io/badge/LINKEDIN-0d1117?style=flat-square&logo=linkedin&logoColor=58a6ff" alt="LinkedIn"/></a>
+<a href="mailto:harshitmathur88@gmail.com"><img src="https://img.shields.io/badge/EMAIL-0d1117?style=flat-square&logo=gmail&logoColor=f0883e" alt="Email"/></a>
+<a href="https://drive.google.com/file/d/16q3oG-jnatcv8OK1dFvs3YHSDGiGZrGe/view?usp=sharing"><img src="https://img.shields.io/badge/RESUME-0d1117?style=flat-square&logo=googledrive&logoColor=d2a8ff" alt="Resume"/></a>
+<a href="https://github.com/Spiderboyis"><img src="https://img.shields.io/badge/GITHUB-0d1117?style=flat-square&logo=github&logoColor=f0f6fc" alt="GitHub"/></a>
+<a href="https://x.com/spiderboyis"><img src="https://img.shields.io/badge/X-0d1117?style=flat-square&logo=x&logoColor=ffffff" alt="X"/></a>
 
 </div>
 
 <div align="center">
-  <img src="./assets/divider-cyber.svg" alt="Cyber Divider" width="100%">
+  <img src="./assets/divider-cyber.svg" alt="System Divider" width="100%">
 </div>
 
-## ⚡ Builder Dossier
+## `01` — Selected Systems Architecture
+
+<div align="center">
+  <img src="./assets/projects-matrix.svg" alt="Selected Systems Architecture" width="100%">
+</div>
+
+<br/>
+
+| System | Role & Overview | Stack | Verification & Direct Links |
+| :--- | :--- | :--- | :--- |
+| **[Tagzzs](https://tagzzs.com)** | **Founding Member & Full-Stack Architect**<br/>AI second brain platform. Captures articles, code snippets & bookmarks in 1-click; indexes with sub-second vector search and contextually resurfaces knowledge in ChatGPT, Claude & Gemini. | `Next.js 16`<br/>`FastAPI`<br/>`Supabase`<br/>`Vector Search`<br/>`Ext-V3` | [Live Platform (tagzzs.com)](https://tagzzs.com)<br/>[Chrome Web Store Extension](https://chromewebstore.google.com/detail/bhndpjphbajpienojjebgfcclmogpcol)<br/>[GitHub Repository](https://github.com/Spiderboyis/tagzzs) |
+| **[DecayState](https://decaystate.com)** | **Founding Member & Core Architect**<br/>Strict accountability protocol engine. Complete 80% of daily commitments or watch your avatar physically decay. Unforgiving AI excuse warden with zero tolerance. | `Next.js`<br/>`FastAPI`<br/>`PostgreSQL`<br/>`Llama 3`<br/>`LangChain` | [Live Platform (decaystate.com)](https://decaystate.com)<br/>[Signup Portal](https://www.decaystate.com/signup)<br/>[GitHub Repository](https://github.com/Col-Asy/Decay-State) |
+| **[CURL-Vision](https://github.com/Spiderboyis/fitness-tracker)** | **Lead Creator & CV Engineer**<br/>Autonomous workout coach without wearables. Tracks 33 3D skeletal landmarks in real-time via MediaPipe Pose, verifying joint angles, counting reps dynamically, and synthesizing Llama meal plans. | `MediaPipe Pose`<br/>`OpenCV`<br/>`Flask`<br/>`Python`<br/>`Llama LLM` | [Source Repository](https://github.com/Spiderboyis/fitness-tracker)<br/>[GitHub Profile](https://github.com/Spiderboyis) |
+| **[Solarflare & CME Detector](https://github.com/Spiderboyis)** | **Deep Learning Researcher (SRMIST ECE Data Sciences)**<br/>Space weather early warning system custom-trained on high-resolution solar magnetogram and coronagraph feeds using YOLOv11 deep object detection to classify sunspot magnetic topologies (Mount Wilson). | `PyTorch`<br/>`Ultralytics YOLOv11`<br/>`OpenCV`<br/>`TorchVision`<br/>`NumPy` | [Portfolio Demo](https://spiderboyis.vercel.app/)<br/>[Research Reference](https://github.com/Spiderboyis) |
+
+<div align="center">
+  <img src="./assets/divider-cyber.svg" alt="System Divider" width="100%">
+</div>
+
+## `02` — Builder Dossier & Background
 
 > *"Building product infrastructure end-to-end — from low-level computer vision pipelines to reactive web interfaces — and shipping SaaS between lectures."*
 
-- 🎓 **Academic**: B.Tech in Electronics & Communication Engineering (ECE) with specialization in **Data Sciences** at **SRM Institute of Science and Technology (SRM IST)**, Kattankulathur, Chennai.
-- 🚀 **Founder & Builder**: Co-founder of [Tagzzs](https://tagzzs.com) (AI second brain platform) and [DecayState](https://decaystate.com) (strict visual accountability engine).
-- 🏆 **Maker Track Record**: 3x Hackathon Builder, Committee Head at AARUUSH (SRMIST), IEEE EDS Member.
-- 🔭 **Core Domains**: Full-Stack SaaS Architecture, Applied Computer Vision (OpenCV, YOLOv11, MediaPipe), High-Performance APIs (FastAPI, Flask, Next.js), and Vector-Augmented AI Systems.
+- 🎓 **Academic**: B.Tech in Electronics & Communication Engineering (**ECE**) with specialization in **Data Sciences** at **SRM Institute of Science and Technology (SRM IST)**, Chennai.
+- 🚀 **Founding Member**: Core systems engineering at [Tagzzs](https://tagzzs.com) (AI second brain) and [DecayState](https://decaystate.com) (strict accountability engine).
+- 🏆 **Track Record**: 3x Hackathon Builder, Committee Head at AARUUSH (SRMIST), IEEE EDS Member.
+- 🔭 **Core Domains**: Full-Stack SaaS Architecture, Vector Semantic Search, Real-Time Computer Vision (OpenCV, YOLOv11, MediaPipe), High-Performance APIs (FastAPI, Next.js).
 
 <div align="center">
-  <img src="./assets/divider-cyber.svg" alt="Cyber Divider" width="100%">
+  <img src="./assets/divider-cyber.svg" alt="System Divider" width="100%">
 </div>
 
-## 🛠️ Featured Ventures & Research
-
-<div align="center">
-  <img src="./assets/projects-matrix.svg" alt="Featured Systems Matrix" width="100%">
-</div>
-
-<br/>
-
-### 1. [Tagzzs](https://tagzzs.com) — AI-Powered Second Brain & Knowledge Memory Layer
-- **Live Platform**: [tagzzs.com](https://tagzzs.com) • [Chrome Web Store Extension](https://chromewebstore.google.com/detail/bhndpjphbajpienojjebgfcclmogpcol) • [GitHub Repository](https://github.com/Spiderboyis/tagzzs)
-- **Role**: Co-Founder & Full-Stack Architect
-- **Tech Stack**: `Next.js 16 (App Router)`, `FastAPI`, `Supabase (PostgreSQL, Auth)`, `TypeScript`, `Tailwind CSS`, `ChromaDB`, `Groq (Llama 3)`, `Manifest V3 Extension`
-- **Overview**: Stop losing what you already saved. Tagzzs captures articles, code snippets, bookmarks, and workflows via a lightweight browser extension, organizing them with sub-second vector semantic search and contextually resurfacing knowledge directly into ChatGPT, Claude, and Gemini workflows.
-
----
-
-### 2. [DecayState](https://decaystate.com) — Strict-Accountability Protocol Engine
-- **Live Platform**: [decaystate.com](https://decaystate.com) • [Signup Portal](https://www.decaystate.com/signup) • [GitHub Repository](https://github.com/Col-Asy/Decay-State)
-- **Role**: Co-Founder & Core Architect
-- **Tech Stack**: `Next.js`, `FastAPI`, `Python`, `TypeScript`, `Tailwind CSS`, `Framer Motion`, `Supabase`, `Groq (Llama 3)`, `LangChain`
-- **Overview**: Execute 80% of your daily protocol, or physically watch your avatar and ambition decay. Built for people who need high-friction stakes: an uncompromising AI warden vets excuses, visual degradation reflects missed commitments, and missing 3 consecutive days triggers the Ruin State recovery protocol.
-
----
-
-### 3. [CURL-Vision](https://github.com/Spiderboyis/fitness-tracker) — Real-Time Computer Vision Workout Coach
-- **Source Available**: [Spiderboyis/fitness-tracker](https://github.com/Spiderboyis/fitness-tracker)
-- **Role**: Lead Developer & Creator
-- **Tech Stack**: `Python`, `Google MediaPipe Pose`, `OpenCV`, `Flask`, `Next.js`, `Tailwind CSS`, `Llama LLM`
-- **Overview**: Autonomous workout feedback without wearable sensors. Uses Google MediaPipe to track 33 3D skeletal landmarks in real-time, calculating bilateral joint angles to verify exercise form, count repetitions dynamically, provide live biomechanical feedback overlays, and synthesize personalized nutritional plans via Llama LLM.
-
----
-
-### 4. [Solarflare & CME Detector](https://github.com/Spiderboyis) — Astrophysical Computer Vision with YOLOv11
-- **Research Reference**: [SRMIST Space Weather Research](https://github.com/Spiderboyis) • [Portfolio Demo](https://spiderboyis.vercel.app/)
-- **Role**: Deep Learning & Computer Vision Researcher (SRMIST ECE Data Sciences)
-- **Tech Stack**: `PyTorch`, `Ultralytics YOLOv11`, `OpenCV`, `TorchVision`, `Python`, `NumPy`, `Matplotlib`
-- **Overview**: Space weather early warning system custom-trained on high-resolution solar magnetogram and coronagraph feeds. Uses YOLOv11 deep object detection to classify sunspot magnetic topologies (Mount Wilson and Zurich-MacIntosh classification schemes) to predict high-energy solar flare outbreaks and Coronal Mass Ejections (CMEs).
-
-<div align="center">
-  <img src="./assets/divider-cyber.svg" alt="Cyber Divider" width="100%">
-</div>
-
-## 🧬 Technical Arsenal
+## `03` — Technical Arsenal
 
 | Category | Technologies & Tools |
 |---|---|
 | **Languages** | `Python`, `TypeScript`, `JavaScript`, `Java`, `C`, `SQL (PostgreSQL)`, `HTML5`, `CSS3` |
-| **Frontend & UI** | `Next.js (App Router)`, `React`, `Tailwind CSS`, `Shadcn/ui`, `Framer Motion` |
+| **Frontend & UI** | `Next.js 16 (App Router)`, `React`, `Tailwind CSS`, `Shadcn/ui`, `Framer Motion` |
 | **Backend & Microservices** | `FastAPI`, `Flask`, `Node.js`, `Express`, `Next.js API Routes`, `RESTful APIs` |
-| **AI / Machine Learning & CV** | `PyTorch`, `Ultralytics YOLOv11`, `OpenCV`, `Google MediaPipe`, `ChromaDB`, `Groq (Llama 3)`, `Hugging Face`, `LangChain`, `Scikit-Learn` |
+| **AI / Computer Vision & ML** | `PyTorch`, `Ultralytics YOLOv11`, `OpenCV`, `Google MediaPipe`, `ChromaDB`, `Groq (Llama 3)`, `LangChain` |
 | **Databases & Cloud** | `Supabase (PostgreSQL, Row Level Security, Auth)`, `Firebase / Firestore`, `Vercel` |
-| **DevOps & Engineering Tools** | `Git`, `GitHub Actions (CI/CD)`, `Docker`, `Linux / Bash`, `Postman`, `Jupyter Notebook`, `VS Code` |
+| **DevOps & Engineering Tools** | `Git`, `GitHub Actions (CI/CD)`, `Docker`, `Linux / Bash`, `Postman`, `Jupyter Notebook` |
 
 <div align="center">
-  <img src="./assets/divider-cyber.svg" alt="Cyber Divider" width="100%">
+  <img src="./assets/divider-cyber.svg" alt="System Divider" width="100%">
 </div>
 
-## 📊 Telemetry & Live Activity
+## `04` — Telemetry & Velocity
 
 <div align="center">
 
@@ -108,12 +87,10 @@
 </div>
 
 <div align="center">
-  <img src="./assets/divider-cyber.svg" alt="Cyber Divider" width="100%">
+  <img src="./assets/divider-cyber.svg" alt="System Divider" width="100%">
 </div>
 
 <div align="center">
-
-### Let's Build Something Exceptional
 
 <sub>
   <a href="https://spiderboyis.vercel.app/">Portfolio</a> •
@@ -125,6 +102,6 @@
 </sub>
 
 <br/>
-<sub>Engineered with pure SMIL vector animation • Crafted by Harshit Mathur</sub>
+<sub>INDEX Nº 001 • CHENNAI, IN (13.08° N) • HARSHIT MATHUR</sub>
 
 </div>
