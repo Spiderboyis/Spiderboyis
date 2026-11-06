@@ -33,7 +33,8 @@ Full-stack developer and co-founder based in Chennai, India. I build product inf
 
 <div align="center">
 
-<img src="./github-metrics.svg" alt="GitHub metrics" width="960">
+![Stats](https://github-readme-stats.vercel.app/api?username=Spiderboyis&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+![Streak](https://streak-stats.demolab.com?user=Spiderboyis&theme=tokyonight&hide_border=true)
 
 </div>
 
