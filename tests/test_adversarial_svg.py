@@ -168,14 +168,12 @@ class TestSecurityAndForbiddenConstructs(unittest.TestCase):
                 f"CSS @keyframes found in {rel_path} — must rely strictly on SMIL",
             )
 
-    def test_github_metrics_svg_foreignobject_catalogued(self):
-        """Acknowledge and catalog that third-party github-metrics.svg relies on foreignObject."""
+    def test_github_metrics_svg_safety(self):
+        """Confirm github-metrics.svg is valid, safe, and contains no executable scripts."""
         path = ROOT_DIR / "github-metrics.svg"
         content = path.read_text(encoding="utf-8")
-        self.assertIn("<foreignObject", content)
-        self.assertIn("@keyframes", content)
-        # Ensure it does NOT contain executable script tags
         self.assertNotIn("<script", content)
+        self.assertNotIn("<foreignObject", content)
 
 
 class TestSMILAnimationAttributes(unittest.TestCase):
