@@ -3,7 +3,7 @@
 
 Fetches live public repository metrics directly from the GitHub API and renders
 a pixel-perfect architectural SVG matching the dark slate (#090d16) blueprint aesthetic.
-Zero third-party scraper dependencies. Zero token authorization errors.
+Zero third-party scraper dependencies. Zero token authorization errors. Zero text overflow.
 """
 
 import json
@@ -84,7 +84,7 @@ def generate_svg():
     css_pct = (css_bytes / total_bytes * 100) if total_bytes else 2.0
     other_pct = max(0.0, 100.0 - (ts_pct + py_pct + java_pct + css_pct))
 
-    # Bar widths (total 400px)
+    # Bar widths (total strictly 400px)
     ts_w = round(400 * (ts_pct / 100))
     py_w = round(400 * (py_pct / 100))
     java_w = round(400 * (java_pct / 100))
@@ -106,11 +106,16 @@ def generate_svg():
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+
+    <!-- Clip Path for Proportion Bar to guarantee smooth rounded corners without overflow -->
+    <clipPath id="bar-clip">
+      <rect x="0" y="0" width="400" height="10" rx="3" />
+    </clipPath>
   </defs>
 
   <rect width="960" height="400" fill="#090d16"/>
 
-  <!-- Outer Architectural Grid Frame -->
+  <!-- Outer Architectural Grid Frame (x=24 to x=936) -->
   <rect x="24" y="16" width="912" height="368" fill="none" stroke="#30363d" stroke-width="0.8"/>
 
   <!-- Header Dividers -->
@@ -175,7 +180,7 @@ def generate_svg():
       <text x="72" y="22" font-size="11" fill="#8b949e">{followers} Followers · {following} Following · 13 Starred Repos</text>
 
       <text x="0" y="44" font-size="11" fill="#7d8590">focus   ▸</text>
-      <text x="72" y="44" font-size="11" fill="#8b949e">Full-Stack SaaS · Computer Vision · Space AI</text>
+      <text x="72" y="44" font-size="11" fill="#8b949e">AI Memory Layers · Real-Time CV · Space AI</text>
     </g>
   </g>
 
@@ -183,68 +188,70 @@ def generate_svg():
   <g transform="translate(504, 88)">
     <text x="0" y="0" font-size="10" fill="#7d8590" letter-spacing="1.5">02 / VERIFIED LANGUAGE BREAKDOWN</text>
 
-    <!-- Language Progress Bar (400px total width) -->
+    <!-- Language Progress Bar (400px total width with guaranteed clip-path bounds) -->
     <g transform="translate(0, 16)">
       <rect x="0" y="0" width="400" height="10" rx="3" fill="#21262d"/>
-      <rect x="0" y="0" width="{ts_w}" height="10" rx="3" fill="#3178c6"/>
-      <rect x="{py_x}" y="0" width="{py_w}" height="10" fill="#3572A5"/>
-      <rect x="{java_x}" y="0" width="{java_w}" height="10" fill="#b07219"/>
-      <rect x="{css_x}" y="0" width="{css_w}" height="10" fill="#563d7c"/>
-      <rect x="{other_x}" y="0" width="{other_w}" height="10" rx="3" fill="#e34c26"/>
+      <g clip-path="url(#bar-clip)">
+        <rect x="0" y="0" width="{ts_w}" height="10" fill="#3178c6"/>
+        <rect x="{py_x}" y="0" width="{py_w}" height="10" fill="#3572A5"/>
+        <rect x="{java_x}" y="0" width="{java_w}" height="10" fill="#b07219"/>
+        <rect x="{css_x}" y="0" width="{css_w}" height="10" fill="#563d7c"/>
+        <rect x="{other_x}" y="0" width="{other_w}" height="10" fill="#e34c26"/>
+      </g>
     </g>
 
-    <!-- Language Breakdown List -->
+    <!-- Language Breakdown List (Optimized horizontal spacing with 50px+ safety margins) -->
     <g transform="translate(0, 52)">
       <!-- TypeScript -->
       <g transform="translate(0, 0)">
         <circle cx="6" cy="-4" r="4" fill="#3178c6"/>
         <text x="18" y="0" font-size="11" font-weight="600" fill="#f0f6fc">TypeScript</text>
-        <text x="120" y="0" font-size="11" fill="#8b949e">{ts_bytes / (1024*1024):.2f} MB</text>
-        <text x="210" y="0" font-size="11" fill="#58a6ff">{ts_pct:.1f}%</text>
-        <text x="270" y="0" font-size="10" fill="#7d8590">Next.js 16 · Ext-V3 · Scheduler</text>
+        <text x="110" y="0" font-size="11" fill="#8b949e">{ts_bytes / (1024*1024):.2f} MB</text>
+        <text x="176" y="0" font-size="11" font-weight="600" fill="#58a6ff">{ts_pct:.1f}%</text>
+        <text x="230" y="0" font-size="10" fill="#7d8590">Tagzzs (Kai AI) · Ext-V3</text>
       </g>
 
       <!-- Python -->
       <g transform="translate(0, 28)">
         <circle cx="6" cy="-4" r="4" fill="#3572A5"/>
         <text x="18" y="0" font-size="11" font-weight="600" fill="#f0f6fc">Python</text>
-        <text x="120" y="0" font-size="11" fill="#8b949e">{py_bytes / 1024:.0f} KB</text>
-        <text x="210" y="0" font-size="11" fill="#58a6ff">{py_pct:.1f}%</text>
-        <text x="270" y="0" font-size="10" fill="#7d8590">FastAPI · YOLOv11 · MediaPipe</text>
+        <text x="110" y="0" font-size="11" fill="#8b949e">{py_bytes / 1024:.0f} KB</text>
+        <text x="176" y="0" font-size="11" font-weight="600" fill="#58a6ff">{py_pct:.1f}%</text>
+        <text x="230" y="0" font-size="10" fill="#7d8590">FastAPI · YOLOv11 AI</text>
       </g>
 
       <!-- Java -->
       <g transform="translate(0, 56)">
         <circle cx="6" cy="-4" r="4" fill="#b07219"/>
         <text x="18" y="0" font-size="11" font-weight="600" fill="#f0f6fc">Java</text>
-        <text x="120" y="0" font-size="11" fill="#8b949e">{java_bytes / 1024:.0f} KB</text>
-        <text x="210" y="0" font-size="11" fill="#58a6ff">{java_pct:.1f}%</text>
-        <text x="270" y="0" font-size="10" fill="#7d8590">Data Structures &amp; LeetCode</text>
+        <text x="110" y="0" font-size="11" fill="#8b949e">{java_bytes / 1024:.0f} KB</text>
+        <text x="176" y="0" font-size="11" font-weight="600" fill="#58a6ff">{java_pct:.1f}%</text>
+        <text x="230" y="0" font-size="10" fill="#7d8590">LeetCode · Algorithms</text>
       </g>
 
       <!-- CSS / Styles -->
       <g transform="translate(0, 84)">
         <circle cx="6" cy="-4" r="4" fill="#563d7c"/>
         <text x="18" y="0" font-size="11" font-weight="600" fill="#f0f6fc">CSS / UI</text>
-        <text x="120" y="0" font-size="11" fill="#8b949e">{css_bytes / 1024:.0f} KB</text>
-        <text x="210" y="0" font-size="11" fill="#58a6ff">{css_pct:.1f}%</text>
-        <text x="270" y="0" font-size="10" fill="#7d8590">Tailwind CSS · Cyberpunk Themes</text>
+        <text x="110" y="0" font-size="11" fill="#8b949e">{css_bytes / 1024:.0f} KB</text>
+        <text x="176" y="0" font-size="11" font-weight="600" fill="#58a6ff">{css_pct:.1f}%</text>
+        <text x="230" y="0" font-size="10" fill="#7d8590">Tailwind · Dark Themes</text>
       </g>
 
       <!-- Other / Systems -->
       <g transform="translate(0, 112)">
         <circle cx="6" cy="-4" r="4" fill="#e34c26"/>
         <text x="18" y="0" font-size="11" font-weight="600" fill="#f0f6fc">Other</text>
-        <text x="120" y="0" font-size="11" fill="#8b949e">39 KB</text>
-        <text x="210" y="0" font-size="11" fill="#58a6ff">{other_pct:.1f}%</text>
-        <text x="270" y="0" font-size="10" fill="#7d8590">PLpgSQL · Dockerfile · Shell</text>
+        <text x="110" y="0" font-size="11" fill="#8b949e">39 KB</text>
+        <text x="176" y="0" font-size="11" font-weight="600" fill="#58a6ff">{other_pct:.1f}%</text>
+        <text x="230" y="0" font-size="10" fill="#7d8590">PostgreSQL · Docker</text>
       </g>
     </g>
 
     <!-- Verified Badge Note -->
     <g transform="translate(0, 206)">
       <rect x="0" y="0" width="400" height="24" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
-      <text x="200" y="16" text-anchor="middle" font-size="10" fill="#3fb950" letter-spacing="0.5">✓ AUDITED CODEBASE: {total_bytes:,} BYTES ACROSS {public_repos_count} REPOSITORIES</text>
+      <text x="200" y="16" text-anchor="middle" font-size="10" fill="#3fb950" letter-spacing="0.5">✓ {total_bytes:,} BYTES VERIFIED ACROSS {public_repos_count} CODEBASES</text>
     </g>
   </g>
 
