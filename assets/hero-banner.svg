@@ -1,111 +1,130 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 290" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="canvas-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#090d16" />
       <stop offset="50%" stop-color="#0d1322" />
-      <stop offset="100%" stop-color="#080c14" />
+      <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
 
-    <!-- Border Glow Gradient -->
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7" />
-      <stop offset="50%" stop-color="#bb9af7" />
-      <stop offset="100%" stop-color="#00f0ff" />
+    <!-- Glass Rim Gradient -->
+    <linearGradient id="glass-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="25%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="70%" stop-color="#c084fc" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.4" />
     </linearGradient>
 
-    <!-- Accent Text Gradient -->
-    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7" />
-      <stop offset="50%" stop-color="#bb9af7" />
-      <stop offset="100%" stop-color="#00f0ff" />
+    <!-- Name Text Gradient -->
+    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#93c5fd" />
     </linearGradient>
 
-    <!-- Laser Grid Pattern -->
-    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#162035" stroke-width="0.7" stroke-opacity="0.6" />
+    <!-- Accent Pill Gradient -->
+    <linearGradient id="pill-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Ambient Mesh Filter -->
+    <filter id="aurora-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="45" result="blur" />
+    </filter>
+
+    <!-- Subtle Dot Grid Pattern -->
+    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.06" />
     </pattern>
-
-    <!-- Clip-paths for sequential typing animation -->
-    <clipPath id="type-clip-1">
-      <rect x="34" y="110" width="0" height="32">
-        <animate attributeName="width" from="0" to="890" dur="2.4s" begin="0.3s" fill="freeze" calcMode="linear" />
-      </rect>
-    </clipPath>
-
-    <clipPath id="type-clip-2">
-      <rect x="34" y="150" width="0" height="32">
-        <animate attributeName="width" from="0" to="890" dur="2.4s" begin="2.7s" fill="freeze" calcMode="linear" />
-      </rect>
-    </clipPath>
-
-    <clipPath id="type-clip-3">
-      <rect x="34" y="190" width="0" height="32">
-        <animate attributeName="width" from="0" to="890" dur="2.4s" begin="5.1s" fill="freeze" calcMode="linear" />
-      </rect>
-    </clipPath>
   </defs>
 
-  <!-- Window Container -->
-  <rect x="1" y="1" width="958" height="288" rx="14" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5" />
+  <!-- Container Box -->
+  <rect x="1" y="1" width="958" height="258" rx="16" fill="url(#canvas-bg)" stroke="url(#glass-rim)" stroke-width="1.2" />
 
-  <!-- Background Cyber Grid -->
-  <rect x="2" y="38" width="956" height="248" fill="url(#cyber-grid)" rx="0" opacity="0.7" />
-
-  <!-- Terminal Header Bar -->
-  <path d="M1 14 C1 6.82 6.82 1 14 1 L946 1 C953.18 1 959 6.82 959 14 L959 38 L1 38 Z" fill="#141a29" />
-  <line x1="1" y1="38" x2="959" y2="38" stroke="#1e293b" stroke-width="1" />
-
-  <!-- Terminal Window Controls -->
-  <circle cx="26" cy="19" r="6" fill="#ff5f56" />
-  <circle cx="46" cy="19" r="6" fill="#ffbd2e" />
-  <circle cx="66" cy="19" r="6" fill="#27c93f" />
-
-  <!-- Header Title -->
-  <text x="480" y="24" text-anchor="middle" fill="#8b949e" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" font-weight="500">harshit@spiderboyis: ~ (zsh)</text>
-
-  <!-- Live Status Beacon -->
-  <g transform="translate(840, 12)">
-    <circle cx="8" cy="7" r="4.5" fill="#73daca">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite" />
+  <!-- Ambient Glowing Aurora Orbs (Breathing Animation) -->
+  <g filter="url(#aurora-blur)" opacity="0.65">
+    <!-- Cyan Orb Top-Left -->
+    <circle cx="160" cy="50" r="120" fill="#06b6d4">
+      <animate attributeName="opacity" values="0.35;0.65;0.35" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="160;190;160" dur="11s" repeatCount="indefinite" />
     </circle>
-    <circle cx="8" cy="7" r="7.5" fill="none" stroke="#73daca" stroke-width="1" opacity="0.6">
-      <animate attributeName="r" values="4.5;10;4.5" dur="1.8s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite" />
+    <!-- Indigo/Violet Orb Bottom-Right -->
+    <circle cx="820" cy="200" r="140" fill="#6366f1">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="200;170;200" dur="13s" repeatCount="indefinite" />
     </circle>
-    <text x="22" y="11" fill="#73daca" font-family="'Fira Code', monospace" font-size="11" font-weight="bold" letter-spacing="1">ONLINE</text>
+    <!-- Purple Orb Center -->
+    <circle cx="480" cy="130" r="90" fill="#a855f7">
+      <animate attributeName="opacity" values="0.2;0.45;0.2" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="r" values="90;110;90" dur="10s" repeatCount="indefinite" />
+    </circle>
   </g>
 
-  <!-- Top Identity Header -->
-  <text x="34" y="74" fill="url(#accent-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="23" font-weight="800" letter-spacing="1.2">HARSHIT MATHUR</text>
-  <text x="260" y="73" fill="#7982a9" font-family="'Fira Code', monospace" font-size="13">// Full-Stack Developer &amp; Co-Founder</text>
+  <!-- Dot Grid Texture Overlay -->
+  <rect x="2" y="2" width="956" height="256" rx="15" fill="url(#dot-grid)" />
 
-  <!-- Top Divider Line -->
-  <line x1="34" y1="92" x2="926" y2="92" stroke="#1f293d" stroke-width="1" />
+  <!-- Inner Ambient Frosted Glass Shimmer Line -->
+  <line x1="40" y1="2" x2="920" y2="2" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
 
-  <!-- Line 1: Mission / Tagzzs & DecayState -->
-  <g clip-path="url(#type-clip-1)">
-    <text x="34" y="132" fill="#7aa2f7" font-family="'Fira Code', monospace" font-size="14" font-weight="600">&gt; spiderboyis.focus()</text>
-    <text x="225" y="132" fill="#c0caf5" font-family="'Fira Code', monospace" font-size="14">Building Tagzzs (AI Second Brain) &amp; DecayState</text>
+  <!-- ================= CONTENT ================= -->
+
+  <!-- Top Pill Badge: Co-Founder & Live Platforms -->
+  <g transform="translate(48, 36)">
+    <rect x="0" y="0" width="310" height="26" rx="13" fill="url(#pill-grad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+    <!-- Pulsing Cyan Dot -->
+    <circle cx="14" cy="13" r="4" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="14" cy="13" r="7" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="28" y="17" fill="#bae6fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.3">Co-Founder • Shipping Tagzzs &amp; DecayState</text>
   </g>
 
-  <!-- Line 2: Identity / SRM IST -->
-  <g clip-path="url(#type-clip-2)">
-    <text x="34" y="172" fill="#bb9af7" font-family="'Fira Code', monospace" font-size="14" font-weight="600">&gt; spiderboyis.identity()</text>
-    <text x="248" y="172" fill="#a9b1d6" font-family="'Fira Code', monospace" font-size="14">B.Tech ECE (Data Sciences) @ SRM IST, Chennai</text>
+  <!-- Live Status Badge Top-Right -->
+  <g transform="translate(770, 36)">
+    <rect x="0" y="0" width="142" height="26" rx="13" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+    <circle cx="14" cy="13" r="3.5" fill="#34d399" />
+    <text x="26" y="17" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">Open to Connect</text>
   </g>
 
-  <!-- Line 3: Tech Stack & AI / CV -->
-  <g clip-path="url(#type-clip-3)">
-    <text x="34" y="212" fill="#00f0ff" font-family="'Fira Code', monospace" font-size="14" font-weight="600">&gt; spiderboyis.stack()</text>
-    <text x="215" y="212" fill="#9ece6a" font-family="'Fira Code', monospace" font-size="14">Next.js · FastAPI · PyTorch · YOLOv11 · OpenCV · Supabase</text>
+  <!-- Main Name Title -->
+  <text x="48" y="112" fill="url(#name-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.8">Harshit Mathur</text>
+
+  <!-- Primary Subtitle / Mission -->
+  <text x="48" y="146" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400">
+    <tspan fill="#e2e8f0" font-weight="600">Full-Stack Architect &amp; Founder</tspan> based in Chennai · Engineering AI memory layers &amp; strict protocols
+  </text>
+
+  <!-- Credential Badges Row -->
+  <g transform="translate(48, 178)">
+    <!-- Badge 1: SRM IST Academic -->
+    <g>
+      <rect x="0" y="0" width="225" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+      <text x="12" y="18" fill="#cbd5e1" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">SRM IST • B.Tech ECE (Data)</text>
+    </g>
+
+    <!-- Badge 2: AI & Computer Vision -->
+    <g transform="translate(235, 0)">
+      <rect x="0" y="0" width="205" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+      <text x="12" y="18" fill="#cbd5e1" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">AI/ML &amp; Computer Vision</text>
+    </g>
+
+    <!-- Badge 3: 3x Hackathon Builder -->
+    <g transform="translate(450, 0)">
+      <rect x="0" y="0" width="165" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+      <text x="12" y="18" fill="#cbd5e1" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">3x Hackathon Builder</text>
+    </g>
+
+    <!-- Badge 4: Core Tech Stack -->
+    <g transform="translate(625, 0)">
+      <rect x="0" y="0" width="237" height="28" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+      <text x="12" y="18" fill="#38bdf8" font-family="'Fira Code', monospace, -apple-system, sans-serif" font-size="11" font-weight="500">Next.js · FastAPI · PyTorch</text>
+    </g>
   </g>
 
-  <!-- Line 4: Active Command Prompt with Blinking Cursor -->
-  <g transform="translate(34, 252)">
-    <text x="0" y="0" fill="#e0af68" font-family="'Fira Code', monospace" font-size="14" font-weight="600">&gt; ready_for_collaboration = true</text>
-    <rect x="272" y="-13" width="8" height="16" fill="#00f0ff">
-      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
-    </rect>
-  </g>
+  <!-- Bottom Accent Highlight Line -->
+  <line x1="48" y1="228" x2="912" y2="228" stroke="url(#glass-rim)" stroke-width="1" stroke-opacity="0.4" />
 </svg>

@@ -1,133 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 335" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 310" width="100%" height="100%">
   <defs>
-    <!-- Background Card Gradient -->
-    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e1424" />
+    <!-- Background Gradient -->
+    <linearGradient id="matrix-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0d1322" />
       <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
 
-    <!-- Card 1: Tagzzs Cyan/Blue -->
-    <linearGradient id="tagzzs-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7" />
-      <stop offset="100%" stop-color="#00f0ff" />
+    <!-- Card Background Gradient -->
+    <linearGradient id="card-surface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141a29" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0c101a" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Card 2: DecayState Violet/Rose -->
-    <linearGradient id="decay-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#bb9af7" />
-      <stop offset="100%" stop-color="#f7768e" />
+    <!-- Card 1 Rim: Cyan Glow -->
+    <linearGradient id="rim-tagzzs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
     </linearGradient>
 
-    <!-- Card 3: CURL-Vision Emerald/Teal -->
-    <linearGradient id="curl-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#73daca" />
-      <stop offset="100%" stop-color="#9ece6a" />
+    <!-- Card 2 Rim: Violet Glow -->
+    <linearGradient id="rim-decay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
     </linearGradient>
 
-    <!-- Card 4: Solarflare Orange/Yellow -->
-    <linearGradient id="solar-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ff9e64" />
-      <stop offset="100%" stop-color="#e0af68" />
+    <!-- Card 3 Rim: Emerald Glow -->
+    <linearGradient id="rim-curl" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#059669" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
     </linearGradient>
+
+    <!-- Card 4 Rim: Amber Glow -->
+    <linearGradient id="rim-solar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#d97706" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="card-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+    </filter>
   </defs>
 
-  <!-- Section Title -->
-  <text x="15" y="22" fill="#7aa2f7" font-family="'Fira Code', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">&gt; FEATURED_SYSTEMS.telemetry</text>
-  <line x1="15" y1="32" x2="945" y2="32" stroke="#1f293d" stroke-width="1" />
+  <!-- Canvas Surface -->
+  <rect x="0" y="0" width="960" height="310" rx="16" fill="url(#matrix-bg)" />
 
-  <!-- CARD 1: Tagzzs -->
-  <g transform="translate(15, 45)">
-    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
-    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#tagzzs-glow)" />
+  <!-- Ambient Light Accents Behind Cards -->
+  <g filter="url(#card-glow)" opacity="0.4">
+    <circle cx="240" cy="90" r="80" fill="#0284c7">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="720" cy="90" r="80" fill="#7c3aed">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="240" cy="220" r="80" fill="#059669">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="720" cy="220" r="80" fill="#d97706">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- ================= CARD 1: Tagzzs ================= -->
+  <g transform="translate(16, 16)">
+    <rect width="456" height="130" rx="12" fill="url(#card-surface)" stroke="url(#rim-tagzzs)" stroke-width="1.2" />
+    <!-- Brand Icon -->
+    <rect x="20" y="20" width="34" height="34" rx="8" fill="#00f0ff" fill-opacity="0.12" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1" />
+    <text x="37" y="42" text-anchor="middle" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="13" font-weight="bold">TZ</text>
     
-    <text x="22" y="31" fill="#7aa2f7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">Tagzzs</text>
-    <rect x="96" y="17" width="124" height="18" rx="9" fill="#16243d" />
-    <text x="158" y="30" text-anchor="middle" fill="#00f0ff" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">AI SECOND BRAIN</text>
+    <!-- Title & Badge -->
+    <text x="64" y="36" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700">Tagzzs</text>
+    <rect x="128" y="23" width="98" height="18" rx="9" fill="#00f0ff" fill-opacity="0.1" />
+    <text x="177" y="35" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.5">AI SECOND BRAIN</text>
     
-    <!-- Beacon -->
-    <circle cx="435" cy="27" r="4" fill="#00f0ff">
+    <!-- Pulse Indicator -->
+    <circle cx="430" cy="30" r="4" fill="#00f0ff">
       <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
     </circle>
-    <circle cx="435" cy="27" r="8" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.6">
-      <animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2s" repeatCount="indefinite" />
+    <circle cx="430" cy="30" r="7" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.5">
+      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite" />
     </circle>
+
+    <!-- Description -->
+    <text x="20" y="78" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400">Captures snippets in 1-click &amp; resurfaces knowledge via vector search</text>
     
-    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Captures anything in 1-click &amp; resurfaces</text>
-    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">contextually when needed. Live in prod.</text>
-    
-    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[Next.js · Supabase · Vector Search · Ext]</text>
+    <!-- Tech Stack Pills -->
+    <text x="20" y="108" fill="#7dd3fc" font-family="'Fira Code', monospace" font-size="11">Next.js 16 · FastAPI · Supabase · Vector Search · Ext</text>
   </g>
 
-  <!-- CARD 2: DecayState -->
-  <g transform="translate(485, 45)">
-    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
-    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#decay-glow)" />
+  <!-- ================= CARD 2: DecayState ================= -->
+  <g transform="translate(488, 16)">
+    <rect width="456" height="130" rx="12" fill="url(#card-surface)" stroke="url(#rim-decay)" stroke-width="1.2" />
+    <!-- Brand Icon -->
+    <rect x="20" y="20" width="34" height="34" rx="8" fill="#c084fc" fill-opacity="0.12" stroke="#c084fc" stroke-opacity="0.3" stroke-width="1" />
+    <text x="37" y="42" text-anchor="middle" fill="#c084fc" font-family="'Fira Code', monospace" font-size="13" font-weight="bold">DS</text>
     
-    <text x="22" y="31" fill="#bb9af7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">DecayState</text>
-    <rect x="122" y="17" width="145" height="18" rx="9" fill="#281e3d" />
-    <text x="194.5" y="30" text-anchor="middle" fill="#bb9af7" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">ACCOUNTABILITY ENGINE</text>
+    <!-- Title & Badge -->
+    <text x="64" y="36" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700">DecayState</text>
+    <rect x="160" y="23" width="112" height="18" rx="9" fill="#c084fc" fill-opacity="0.1" />
+    <text x="216" y="35" text-anchor="middle" fill="#c084fc" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.5">STRICT PROTOCOL</text>
     
-    <!-- Beacon -->
-    <circle cx="435" cy="27" r="4" fill="#f7768e">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
+    <!-- Pulse Indicator -->
+    <circle cx="430" cy="30" r="4" fill="#c084fc">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite" />
     </circle>
-    <circle cx="435" cy="27" r="8" fill="none" stroke="#f7768e" stroke-width="1" opacity="0.6">
-      <animate attributeName="r" values="4;9;4" dur="1.4s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="1.4s" repeatCount="indefinite" />
-    </circle>
+
+    <!-- Description -->
+    <text x="20" y="78" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400">Strict accountability engine where avatar decays when habits are missed</text>
     
-    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Strict protocol tracker: tasks visually</text>
-    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">&apos;decay&apos; when daily commitments are skipped.</text>
-    
-    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[Next.js · FastAPI · PostgreSQL · Llama]</text>
+    <!-- Tech Stack Pills -->
+    <text x="20" y="108" fill="#d8b4fe" font-family="'Fira Code', monospace" font-size="11">Next.js · FastAPI · PostgreSQL · Llama 3 Warden</text>
   </g>
 
-  <!-- CARD 3: CURL-Vision -->
-  <g transform="translate(15, 190)">
-    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
-    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#curl-glow)" />
+  <!-- ================= CARD 3: CURL-Vision ================= -->
+  <g transform="translate(16, 162)">
+    <rect width="456" height="130" rx="12" fill="url(#card-surface)" stroke="url(#rim-curl)" stroke-width="1.2" />
+    <!-- Brand Icon -->
+    <rect x="20" y="20" width="34" height="34" rx="8" fill="#34d399" fill-opacity="0.12" stroke="#34d399" stroke-opacity="0.3" stroke-width="1" />
+    <text x="37" y="42" text-anchor="middle" fill="#34d399" font-family="'Fira Code', monospace" font-size="13" font-weight="bold">CV</text>
     
-    <text x="22" y="31" fill="#73daca" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">CURL-Vision</text>
-    <rect x="130" y="17" width="126" height="18" rx="9" fill="#16332d" />
-    <text x="193" y="30" text-anchor="middle" fill="#73daca" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">CV WORKOUT AI</text>
+    <!-- Title & Badge -->
+    <text x="64" y="36" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700">CURL-Vision</text>
+    <rect x="170" y="23" width="112" height="18" rx="9" fill="#34d399" fill-opacity="0.1" />
+    <text x="226" y="35" text-anchor="middle" fill="#34d399" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.5">COMPUTER VISION</text>
     
-    <!-- Beacon -->
-    <circle cx="435" cy="27" r="4" fill="#9ece6a">
-      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite" />
+    <!-- Pulse Indicator -->
+    <circle cx="430" cy="30" r="4" fill="#34d399">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite" />
     </circle>
-    <circle cx="435" cy="27" r="8" fill="none" stroke="#9ece6a" stroke-width="1" opacity="0.6">
-      <animate attributeName="r" values="4;9;4" dur="1.6s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="1.6s" repeatCount="indefinite" />
-    </circle>
+
+    <!-- Description -->
+    <text x="20" y="78" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400">Real-time 33-point pose estimation with live biomechanical angle feedback</text>
     
-    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Real-time pose estimation + form correction,</text>
-    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">rep counting, and Llama meal planners.</text>
-    
-    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[MediaPipe · OpenCV · Flask · Llama]</text>
+    <!-- Tech Stack Pills -->
+    <text x="20" y="108" fill="#86efac" font-family="'Fira Code', monospace" font-size="11">Google MediaPipe · OpenCV · Flask · Llama LLM</text>
   </g>
 
-  <!-- CARD 4: Solarflare & CME -->
-  <g transform="translate(485, 190)">
-    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
-    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#solar-glow)" />
+  <!-- ================= CARD 4: Solarflare & CME ================= -->
+  <g transform="translate(488, 162)">
+    <rect width="456" height="130" rx="12" fill="url(#card-surface)" stroke="url(#rim-solar)" stroke-width="1.2" />
+    <!-- Brand Icon -->
+    <rect x="20" y="20" width="34" height="34" rx="8" fill="#fbbf24" fill-opacity="0.12" stroke="#fbbf24" stroke-opacity="0.3" stroke-width="1" />
+    <text x="37" y="42" text-anchor="middle" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="13" font-weight="bold">SF</text>
     
-    <text x="22" y="31" fill="#ff9e64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">Solarflare &amp; CME</text>
-    <rect x="178" y="17" width="144" height="18" rx="9" fill="#3d281a" />
-    <text x="250" y="30" text-anchor="middle" fill="#ff9e64" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">YOLOv11 COMPUTER VISION</text>
+    <!-- Title & Badge -->
+    <text x="64" y="36" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700">Solarflare &amp; CME</text>
+    <rect x="210" y="23" width="108" height="18" rx="9" fill="#fbbf24" fill-opacity="0.1" />
+    <text x="264" y="35" text-anchor="middle" fill="#fbbf24" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.5">YOLOv11 RESEARCH</text>
     
-    <!-- Beacon -->
-    <circle cx="435" cy="27" r="4" fill="#e0af68">
+    <!-- Pulse Indicator -->
+    <circle cx="430" cy="30" r="4" fill="#fbbf24">
       <animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite" />
     </circle>
-    <circle cx="435" cy="27" r="8" fill="none" stroke="#e0af68" stroke-width="1" opacity="0.6">
-      <animate attributeName="r" values="4;9;4" dur="2.2s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2.2s" repeatCount="indefinite" />
-    </circle>
+
+    <!-- Description -->
+    <text x="20" y="78" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400">Classifying sunspot topologies to predict solar flares and CME space hazards</text>
     
-    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">YOLOv11 model classifying sunspot topologies</text>
-    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">to predict space-weather &amp; CME hazards.</text>
-    
-    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[PyTorch · YOLOv11 · OpenCV · Python]</text>
+    <!-- Tech Stack Pills -->
+    <text x="20" y="108" fill="#fde68a" font-family="'Fira Code', monospace" font-size="11">PyTorch · Ultralytics YOLOv11 · TorchVision · OpenCV</text>
   </g>
 </svg>

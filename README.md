@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Harshit Mathur - Developer Console](assets/hero-banner.svg)](https://spiderboyis.vercel.app/)
+[![Harshit Mathur - Full-Stack Architect & Co-Founder](assets/hero-banner.svg)](https://spiderboyis.vercel.app/)
 
 <br/>
 
@@ -30,7 +30,7 @@
   <img src="./assets/divider-cyber.svg" alt="Cyber Divider" width="100%">
 </div>
 
-## 🛠️ Featured Systems Matrix
+## 🛠️ Featured Ventures & Research
 
 <div align="center">
   <img src="./assets/projects-matrix.svg" alt="Featured Systems Matrix" width="100%">

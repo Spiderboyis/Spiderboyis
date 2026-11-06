@@ -1,44 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 24" width="100%" height="24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 20" width="100%" height="20">
   <defs>
-    <!-- Base Divider Track Gradient -->
-    <linearGradient id="line-base" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0" />
-      <stop offset="15%" stop-color="#7aa2f7" stop-opacity="0.25" />
-      <stop offset="50%" stop-color="#bb9af7" stop-opacity="0.7" />
-      <stop offset="85%" stop-color="#00f0ff" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
+    <linearGradient id="divider-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#c084fc" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Traveling Laser Beam Gradient -->
-    <linearGradient id="laser-pulse" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
-      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0" />
+    <linearGradient id="center-beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Glow Filter for Center Core -->
-    <linearGradient id="center-glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f0ff" />
-      <stop offset="100%" stop-color="#bb9af7" />
-    </linearGradient>
+    <radialGradient id="center-aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </radialGradient>
   </defs>
 
-  <!-- Static Base Track -->
-  <line x1="40" y1="12" x2="920" y2="12" stroke="url(#line-base)" stroke-width="1.5" />
+  <!-- Base Razor Gradient Track -->
+  <line x1="48" y1="10" x2="912" y2="10" stroke="url(#divider-grad)" stroke-width="1.2" />
 
-  <!-- Animated Traveling Laser Beam -->
-  <line x1="-150" y1="12" x2="-10" y2="12" stroke="url(#laser-pulse)" stroke-width="2.5">
-    <animate attributeName="x1" from="-150" to="1020" dur="3.5s" repeatCount="indefinite" />
-    <animate attributeName="x2" from="-10" to="1160" dur="3.5s" repeatCount="indefinite" />
+  <!-- Smooth Ambient Beam Shift -->
+  <line x1="-120" y1="10" x2="-20" y2="10" stroke="url(#center-beam)" stroke-width="2.2">
+    <animate attributeName="x1" from="-120" to="980" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="x2" from="-20" to="1080" dur="4s" repeatCount="indefinite" />
   </line>
 
-  <!-- Center Diamond Accent with Continuous Rotation -->
-  <g transform="translate(480, 12)">
-    <polygon points="0,-6 6,0 0,6 -6,0" fill="url(#center-glow)">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
-    </polygon>
-    <circle cx="0" cy="0" r="2.2" fill="#ffffff">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-  </g>
+  <!-- Center Ambient Glow Circle & Dot -->
+  <circle cx="480" cy="10" r="6" fill="url(#center-aura)">
+    <animate attributeName="r" values="4;8;4" dur="2.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="480" cy="10" r="2" fill="#ffffff" />
 </svg>
