@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 335" width="100%" height="100%">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1424" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <!-- Card 1: Tagzzs Cyan/Blue -->
+    <linearGradient id="tagzzs-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7aa2f7" />
+      <stop offset="100%" stop-color="#00f0ff" />
+    </linearGradient>
+
+    <!-- Card 2: DecayState Violet/Rose -->
+    <linearGradient id="decay-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bb9af7" />
+      <stop offset="100%" stop-color="#f7768e" />
+    </linearGradient>
+
+    <!-- Card 3: CURL-Vision Emerald/Teal -->
+    <linearGradient id="curl-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#73daca" />
+      <stop offset="100%" stop-color="#9ece6a" />
+    </linearGradient>
+
+    <!-- Card 4: Solarflare Orange/Yellow -->
+    <linearGradient id="solar-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff9e64" />
+      <stop offset="100%" stop-color="#e0af68" />
+    </linearGradient>
+  </defs>
+
+  <!-- Section Title -->
+  <text x="15" y="22" fill="#7aa2f7" font-family="'Fira Code', monospace" font-size="14" font-weight="bold" letter-spacing="1.5">&gt; FEATURED_SYSTEMS.telemetry</text>
+  <line x1="15" y1="32" x2="945" y2="32" stroke="#1f293d" stroke-width="1" />
+
+  <!-- CARD 1: Tagzzs -->
+  <g transform="translate(15, 45)">
+    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
+    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#tagzzs-glow)" />
+    
+    <text x="22" y="31" fill="#7aa2f7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">Tagzzs</text>
+    <rect x="96" y="17" width="124" height="18" rx="9" fill="#16243d" />
+    <text x="158" y="30" text-anchor="middle" fill="#00f0ff" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">AI SECOND BRAIN</text>
+    
+    <!-- Beacon -->
+    <circle cx="435" cy="27" r="4" fill="#00f0ff">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="435" cy="27" r="8" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Captures anything in 1-click &amp; resurfaces</text>
+    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">contextually when needed. Live in prod.</text>
+    
+    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[Next.js · Supabase · Vector Search · Ext]</text>
+  </g>
+
+  <!-- CARD 2: DecayState -->
+  <g transform="translate(485, 45)">
+    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
+    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#decay-glow)" />
+    
+    <text x="22" y="31" fill="#bb9af7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">DecayState</text>
+    <rect x="122" y="17" width="145" height="18" rx="9" fill="#281e3d" />
+    <text x="194.5" y="30" text-anchor="middle" fill="#bb9af7" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">ACCOUNTABILITY ENGINE</text>
+    
+    <!-- Beacon -->
+    <circle cx="435" cy="27" r="4" fill="#f7768e">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="435" cy="27" r="8" fill="none" stroke="#f7768e" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="4;9;4" dur="1.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="1.4s" repeatCount="indefinite" />
+    </circle>
+    
+    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Strict protocol tracker: tasks visually</text>
+    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">&apos;decay&apos; when daily commitments are skipped.</text>
+    
+    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[Next.js · FastAPI · PostgreSQL · Llama]</text>
+  </g>
+
+  <!-- CARD 3: CURL-Vision -->
+  <g transform="translate(15, 190)">
+    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
+    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#curl-glow)" />
+    
+    <text x="22" y="31" fill="#73daca" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">CURL-Vision</text>
+    <rect x="130" y="17" width="126" height="18" rx="9" fill="#16332d" />
+    <text x="193" y="30" text-anchor="middle" fill="#73daca" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">CV WORKOUT AI</text>
+    
+    <!-- Beacon -->
+    <circle cx="435" cy="27" r="4" fill="#9ece6a">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="435" cy="27" r="8" fill="none" stroke="#9ece6a" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="4;9;4" dur="1.6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="1.6s" repeatCount="indefinite" />
+    </circle>
+    
+    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Real-time pose estimation + form correction,</text>
+    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">rep counting, and Llama meal planners.</text>
+    
+    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[MediaPipe · OpenCV · Flask · Llama]</text>
+  </g>
+
+  <!-- CARD 4: Solarflare & CME -->
+  <g transform="translate(485, 190)">
+    <rect width="460" height="135" rx="10" fill="url(#card-bg)" stroke="#1f2d4a" stroke-width="1.2" />
+    <rect x="0" y="0" width="4.5" height="135" rx="2" fill="url(#solar-glow)" />
+    
+    <text x="22" y="31" fill="#ff9e64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="bold">Solarflare &amp; CME</text>
+    <rect x="178" y="17" width="144" height="18" rx="9" fill="#3d281a" />
+    <text x="250" y="30" text-anchor="middle" fill="#ff9e64" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">YOLOv11 COMPUTER VISION</text>
+    
+    <!-- Beacon -->
+    <circle cx="435" cy="27" r="4" fill="#e0af68">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="435" cy="27" r="8" fill="none" stroke="#e0af68" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="4;9;4" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    
+    <text x="22" y="63" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">YOLOv11 model classifying sunspot topologies</text>
+    <text x="22" y="82" fill="#c0caf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">to predict space-weather &amp; CME hazards.</text>
+    
+    <text x="22" y="115" fill="#7982a9" font-family="'Fira Code', monospace" font-size="11">[PyTorch · YOLOv11 · OpenCV · Python]</text>
+  </g>
+</svg>
