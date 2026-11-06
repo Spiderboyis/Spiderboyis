@@ -292,5 +292,47 @@ class TestWCAGContrastRatios(unittest.TestCase):
             )
 
 
+class TestTextBoundsAndOverflowPrevention(unittest.TestCase):
+    """Verify that all text lines in custom SVGs strictly fit within container boundaries."""
+
+    def test_hero_banner_text_fits_within_margins(self):
+        path = ROOT_DIR / "assets/hero-banner.svg"
+        tree = ET.parse(path)
+        root = tree.getroot()
+        for text_el in root.findall(".//{http://www.w3.org/2000/svg}text"):
+            t_str = text_el.text or ""
+            tx = float(text_el.attrib.get("x", 0))
+            fsize = float(text_el.attrib.get("font-size", 12))
+            anchor = text_el.attrib.get("text-anchor", "start")
+            if anchor == "end":
+                self.assertLessEqual(tx, 952.0)
+            else:
+                est_w = len(t_str) * (fsize * 0.65)
+                self.assertLess(tx + est_w, 952.0, f"Hero text line '{t_str}' exceeds right margin 952")
+
+    def test_projects_matrix_text_fits_quadrant_columns(self):
+        path = ROOT_DIR / "assets/projects-matrix.svg"
+        tree = ET.parse(path)
+        root = tree.getroot()
+        for g in root.findall(".//{http://www.w3.org/2000/svg}g"):
+            transform = g.attrib.get("transform", "")
+            if "translate" in transform:
+                m = re.search(r"translate\((\d+),\s*(\d+)\)", transform)
+                if m:
+                    gx = int(m.group(1))
+                    is_left = gx < 480
+                    boundary = 480 if is_left else 928
+                    for text_el in g.findall("{http://www.w3.org/2000/svg}text"):
+                        t_str = text_el.text or ""
+                        tx = float(text_el.attrib.get("x", 0))
+                        fsize = float(text_el.attrib.get("font-size", 12))
+                        est_w = len(t_str) * (fsize * 0.65)
+                        self.assertLess(
+                            gx + tx + est_w,
+                            boundary,
+                            f"Projects text '{t_str}' in column '{gx}' exceeds boundary {boundary}",
+                        )
+
+
 if __name__ == "__main__":
     unittest.main()

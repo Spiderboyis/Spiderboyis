@@ -1,14 +1,5 @@
 <svg viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">
   <defs>
-    <!-- Scanning Laser Gradient for Blueprint Grid -->
-    <linearGradient id="scan-laser" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0" />
-      <stop offset="30%" stop-color="#58a6ff" stop-opacity="0.3" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
-      <stop offset="70%" stop-color="#58a6ff" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0" />
-    </linearGradient>
-
     <!-- Radar Glow Filter -->
     <filter id="radar-glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2" result="blur" />
@@ -28,29 +19,23 @@
   <line x1="480" y1="20" x2="480" y2="460" stroke="#30363d" stroke-width="0.8"/>
   <line x1="32" y1="240" x2="928" y2="240" stroke="#30363d" stroke-width="0.8"/>
 
-  <!-- CONTINUOUS BLUEPRINT HUD SCANLINE (Smoothly sweeps vertically down across grid) -->
-  <line x1="32" x2="928" y1="20" y2="20" stroke="url(#scan-laser)" stroke-width="1.5" opacity="0.75">
-    <animate attributeName="y1" from="20" to="460" dur="6s" repeatCount="indefinite" />
-    <animate attributeName="y2" from="20" to="460" dur="6s" repeatCount="indefinite" />
-  </line>
-
   <!-- ================= 01: TAGZZS (TOP-LEFT) ================= -->
   <g transform="translate(56, 44)">
     <!-- Animated Radar Pulse Beacon -->
     <circle cx="-10" cy="-3" r="3" fill="#58a6ff" filter="url(#radar-glow)">
-      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
     </circle>
     <circle cx="-10" cy="-3" r="3" fill="none" stroke="#58a6ff" stroke-width="0.8">
-      <animate attributeName="r" values="3;9;3" dur="1.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3;9;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
     </circle>
 
     <text x="0" y="0" font-size="11" fill="#58a6ff" letter-spacing="1">01 / FOUNDING VENTURE</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">Tagzzs — AI Second Brain</text>
     
-    <text x="0" y="58" font-size="12" fill="#8b949e">AI-powered second brain platform. Captures articles,</text>
-    <text x="0" y="78" font-size="12" fill="#8b949e">code snippets &amp; bookmarks in 1-click; surfaces context</text>
-    <text x="0" y="98" font-size="12" fill="#8b949e">directly into ChatGPT, Claude &amp; Gemini via vector search.</text>
+    <text x="0" y="58" font-size="12" fill="#8b949e">AI second brain engine. One-click capture</text>
+    <text x="0" y="78" font-size="12" fill="#8b949e">for articles, code snippets &amp; bookmarks;</text>
+    <text x="0" y="98" font-size="12" fill="#8b949e">contextual vector search for modern LLMs.</text>
 
     <!-- Micro Tags -->
     <g transform="translate(0, 126)">
@@ -63,11 +48,11 @@
       <rect x="154" y="0" width="72" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
       <text x="190" y="14" text-anchor="middle" font-size="10" fill="#8b949e">supabase</text>
 
-      <rect x="234" y="0" width="98" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
-      <text x="283" y="14" text-anchor="middle" font-size="10" fill="#8b949e">vector-search</text>
+      <rect x="234" y="0" width="92" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+      <text x="280" y="14" text-anchor="middle" font-size="10" fill="#8b949e">vector-search</text>
 
-      <rect x="340" y="0" width="56" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
-      <text x="368" y="14" text-anchor="middle" font-size="10" fill="#8b949e">ext-v3</text>
+      <rect x="334" y="0" width="56" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+      <text x="362" y="14" text-anchor="middle" font-size="10" fill="#8b949e">ext-v3</text>
     </g>
 
     <!-- Status & Link Note -->
@@ -88,9 +73,9 @@
     <text x="0" y="0" font-size="11" fill="#bc8cff" letter-spacing="1">02 / FOUNDING VENTURE</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">DecayState — Protocol Engine</text>
     
-    <text x="0" y="58" font-size="12" fill="#8b949e">Strict accountability system. Complete 80% of daily</text>
-    <text x="0" y="78" font-size="12" fill="#8b949e">commitments or watch your avatar physically decay.</text>
-    <text x="0" y="98" font-size="12" fill="#8b949e">Features an unforgiving AI excuse warden with zero excuses.</text>
+    <text x="0" y="58" font-size="12" fill="#8b949e">Strict habit accountability platform. Must</text>
+    <text x="0" y="78" font-size="12" fill="#8b949e">hit 80% daily goals or watch avatar decay.</text>
+    <text x="0" y="98" font-size="12" fill="#8b949e">Zero-excuse AI warden enforcement engine.</text>
 
     <!-- Micro Tags -->
     <g transform="translate(0, 126)">
@@ -106,8 +91,8 @@
       <rect x="230" y="0" width="66" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
       <text x="263" y="14" text-anchor="middle" font-size="10" fill="#8b949e">llama-3</text>
 
-      <rect x="304" y="0" width="82" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
-      <text x="345" y="14" text-anchor="middle" font-size="10" fill="#8b949e">langchain</text>
+      <rect x="304" y="0" width="80" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+      <text x="344" y="14" text-anchor="middle" font-size="10" fill="#8b949e">langchain</text>
     </g>
 
     <!-- Status & Link Note -->
@@ -118,19 +103,19 @@
   <g transform="translate(56, 264)">
     <!-- Animated Radar Pulse Beacon -->
     <circle cx="-10" cy="-3" r="3" fill="#3fb950" filter="url(#radar-glow)">
-      <animate attributeName="opacity" values="1;0.4;1" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.4s" repeatCount="indefinite"/>
     </circle>
     <circle cx="-10" cy="-3" r="3" fill="none" stroke="#3fb950" stroke-width="0.8">
-      <animate attributeName="r" values="3;9;3" dur="2.6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3;9;3" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="2.4s" repeatCount="indefinite"/>
     </circle>
 
     <text x="0" y="0" font-size="11" fill="#3fb950" letter-spacing="1">03 / COMPUTER VISION AI</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">CURL-Vision — Workout Coach</text>
     
-    <text x="0" y="58" font-size="12" fill="#8b949e">Autonomous real-time workout coaching without wearables.</text>
-    <text x="0" y="78" font-size="12" fill="#8b949e">Tracks 33 3D skeletal landmarks via MediaPipe Pose, verifying</text>
-    <text x="0" y="98" font-size="12" fill="#8b949e">joint angles, counting repetitions &amp; synthesizing Llama plans.</text>
+    <text x="0" y="58" font-size="12" fill="#8b949e">Autonomous real-time vision workout coach.</text>
+    <text x="0" y="78" font-size="12" fill="#8b949e">Tracks 33 skeletal points via MediaPipe,</text>
+    <text x="0" y="98" font-size="12" fill="#8b949e">validates form &amp; counts repetitions live.</text>
 
     <!-- Micro Tags -->
     <g transform="translate(0, 126)">
@@ -146,12 +131,12 @@
       <rect x="212" y="0" width="60" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
       <text x="242" y="14" text-anchor="middle" font-size="10" fill="#8b949e">python</text>
 
-      <rect x="280" y="0" width="76" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
-      <text x="318" y="14" text-anchor="middle" font-size="10" fill="#8b949e">llama-llm</text>
+      <rect x="280" y="0" width="66" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+      <text x="313" y="14" text-anchor="middle" font-size="10" fill="#8b949e">llama-3</text>
     </g>
 
     <!-- Status & Link Note -->
-    <text x="0" y="172" font-size="11" fill="#7d8590">lead creator • github: Spiderboyis/fitness-tracker</text>
+    <text x="0" y="172" font-size="11" fill="#7d8590">lead creator • Spiderboyis/fitness-tracker</text>
   </g>
 
   <!-- ================= 04: SOLARFLARE & CME (BOTTOM-RIGHT) ================= -->
@@ -168,9 +153,9 @@
     <text x="0" y="0" font-size="11" fill="#f2cc60" letter-spacing="1">04 / ASTROPHYSICAL AI RESEARCH</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">Solarflare &amp; CME Detector</text>
     
-    <text x="0" y="58" font-size="12" fill="#8b949e">Deep learning space weather forecasting system.</text>
-    <text x="0" y="78" font-size="12" fill="#8b949e">Custom YOLOv11 object detection classifying sunspot magnetic</text>
-    <text x="0" y="98" font-size="12" fill="#8b949e">topologies (Mount Wilson scheme) to predict solar flare events.</text>
+    <text x="0" y="58" font-size="12" fill="#8b949e">Space weather hazard forecasting system.</text>
+    <text x="0" y="78" font-size="12" fill="#8b949e">Custom YOLOv11 classifies sunspot groups</text>
+    <text x="0" y="98" font-size="12" fill="#8b949e">(Mount Wilson) to predict solar flares.</text>
 
     <!-- Micro Tags -->
     <g transform="translate(0, 126)">
@@ -191,6 +176,6 @@
     </g>
 
     <!-- Status & Link Note -->
-    <text x="0" y="172" font-size="11" fill="#7d8590">researcher @ srmist ece • space weather forecasting</text>
+    <text x="0" y="172" font-size="11" fill="#7d8590">researcher @ srmist ece • space weather AI</text>
   </g>
 </svg>

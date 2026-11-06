@@ -1,11 +1,34 @@
 <svg viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Harshit Mathur — Full-Stack Architect &amp; Founding Member">
   <defs>
-    <!-- Scanning Laser Gradient -->
-    <linearGradient id="laser-beam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
-      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0" />
-    </linearGradient>
+    <!-- Clip path for phrase 1 (Tagzzs) typing reveal -->
+    <clipPath id="type-clip-1">
+      <rect x="0" y="-14" width="0" height="24">
+        <animate attributeName="width"
+                 values="0; 0; 430; 430; 0; 0; 0; 0"
+                 keyTimes="0; 0.017; 0.117; 0.267; 0.308; 0.330; 0.999; 1.0"
+                 dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip path for phrase 2 (DecayState) typing reveal -->
+    <clipPath id="type-clip-2">
+      <rect x="0" y="-14" width="0" height="24">
+        <animate attributeName="width"
+                 values="0; 0; 0; 445; 445; 0; 0; 0"
+                 keyTimes="0; 0.330; 0.350; 0.450; 0.600; 0.642; 0.664; 1.0"
+                 dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip path for phrase 3 (Research) typing reveal -->
+    <clipPath id="type-clip-3">
+      <rect x="0" y="-14" width="0" height="24">
+        <animate attributeName="width"
+                 values="0; 0; 0; 445; 445; 0; 0"
+                 keyTimes="0; 0.664; 0.683; 0.783; 0.933; 0.975; 1.0"
+                 dur="12s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
 
     <!-- Beacon Glow Filter -->
     <filter id="beacon-glow" x="-30%" y="-30%" width="160%" height="160%">
@@ -22,82 +45,88 @@
   <!-- Top Static Rule Line -->
   <line x1="48" y1="52" x2="952" y2="52" stroke="#30363d" stroke-width="1" />
 
-  <!-- Continuous Laser Scan on Top Rule (Loops infinitely) -->
-  <line x1="-120" y1="52" x2="-20" y2="52" stroke="url(#laser-beam)" stroke-width="1.8">
-    <animate attributeName="x1" from="-120" to="1020" dur="4s" repeatCount="indefinite" />
-    <animate attributeName="x2" from="-20" to="1120" dur="4s" repeatCount="indefinite" />
-  </line>
-
-  <!-- Top Metadata Header -->
+  <!-- Top Metadata Header (Guaranteed zero overflow via text-anchor="end" at x=952) -->
   <g>
-    <text font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8b949e" x="48" y="38" font-size="11" letter-spacing="3.5">DOSSIER — INDEX Nº 001</text>
+    <text font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8b949e" x="48" y="38" font-size="11" letter-spacing="2">DOSSIER — INDEX Nº 001</text>
     
-    <!-- Live Ping Indicator Top-Right -->
-    <g transform="translate(710, 34)">
-      <circle cx="6" cy="0" r="3.5" fill="#3fb950" filter="url(#beacon-glow)">
-        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    <!-- Top-Right Live Ping Beacon + Coordinates (Right-anchored, perfectly flush at 952) -->
+    <g transform="translate(952, 38)">
+      <circle cx="-266" cy="-4" r="3.5" fill="#3fb950" filter="url(#beacon-glow)">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
       </circle>
-      <circle cx="6" cy="0" r="6" fill="none" stroke="#3fb950" stroke-width="0.8" opacity="0.6">
-        <animate attributeName="r" values="3.5;10;3.5" dur="1.8s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite" />
+      <circle cx="-266" cy="-4" r="6" fill="none" stroke="#3fb950" stroke-width="0.8" opacity="0.6">
+        <animate attributeName="r" values="3.5;9;3.5" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
       </circle>
-      <text font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8b949e" x="18" y="4" font-size="11" letter-spacing="3.5">CHENNAI, IN — 13.08° N • SRM IST</text>
+      <text font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" fill="#8b949e" x="0" y="0" font-size="11" letter-spacing="1.5" text-anchor="end">CHENNAI, IN — 13.08° N • SRM IST</text>
     </g>
   </g>
 
   <!-- Main Identity Name -->
-  <g transform="translate(46, 146)">
-    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="0" font-size="64" font-weight="700" letter-spacing="-1.5">Harshit Mathur</text>
+  <g transform="translate(48, 142)">
+    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="0" font-size="62" font-weight="700" letter-spacing="-1.5">Harshit Mathur</text>
   </g>
 
   <!-- Subtitle -->
-  <g transform="translate(48, 184)">
-    <text fill="#8b949e" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="0" font-size="17">Full-Stack Architect &amp; Founding Member — Chennai, India.</text>
+  <g transform="translate(48, 180)">
+    <text fill="#8b949e" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="0" font-size="16" letter-spacing="0.2">Full-Stack Architect &amp; Founding Member — Chennai, India.</text>
   </g>
 
-  <!-- Static Focus Details -->
-  <g transform="translate(48, 236)">
+  <!-- Static Dossier Rows (Compact metrics with 260px+ breathing room) -->
+  <g transform="translate(48, 230)">
     <text fill="#7d8590" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="0" font-size="12" letter-spacing="1">focus   ▸</text>
-    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="88" y="0" font-size="12" letter-spacing="0.5">full-stack systems · AI memory layers · applied computer vision · astrophysics DL</text>
+    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="88" y="0" font-size="12" letter-spacing="0.2">full-stack systems · AI memory layers · computer vision · astrophysics DL</text>
 
-    <text fill="#7d8590" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="26" font-size="12" letter-spacing="1">status  ▸</text>
-    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="88" y="26" font-size="12" letter-spacing="0.5">Founding Member @ Tagzzs &amp; DecayState · B.Tech ECE (Data Sciences) @ SRM IST</text>
+    <text fill="#7d8590" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="24" font-size="12" letter-spacing="1">status  ▸</text>
+    <text fill="#f0f6fc" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="88" y="24" font-size="12" letter-spacing="0.2">Founding Member @ Tagzzs &amp; DecayState · B.Tech ECE (Data Sciences) @ SRM IST</text>
   </g>
 
-  <!-- CONTINUOUS LIVE ROTATING STREAM (12s infinite loop cycling between 3 status feeds) -->
-  <g transform="translate(48, 290)">
+  <!-- ================= AUTHENTIC SMIL TYPING ANIMATION STREAM ================= -->
+  <g transform="translate(48, 286)">
     <text fill="#58a6ff" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" x="0" y="0" font-size="12" letter-spacing="1">stream  ▸</text>
 
-    <!-- Feed 1: Tagzzs -->
-    <g font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="12" fill="#58a6ff">
-      <animate attributeName="opacity" values="1;1;0;0;0;0;0;1" keyTimes="0; 0.28; 0.33; 0.65; 0.70; 0.95; 0.98; 1" dur="10s" repeatCount="indefinite" />
-      <text x="88" y="0">[01/03] LIVE // Shipping Tagzzs (AI second brain) — Chrome Extension &amp; Web Platform</text>
-    </g>
+    <g transform="translate(88, 0)">
+      <!-- Phrase 1: Tagzzs -->
+      <g>
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0; 0.320; 0.330; 1.0" dur="12s" repeatCount="indefinite" />
+        <text clip-path="url(#type-clip-1)" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="12" font-weight="600" fill="#58a6ff">
+          [01/03] LIVE // Shipping Tagzzs — AI Second Brain for LLMs
+        </text>
+      </g>
 
-    <!-- Feed 2: DecayState -->
-    <g font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="12" fill="#bc8cff">
-      <animate attributeName="opacity" values="0;0;1;1;0;0;0;0" keyTimes="0; 0.30; 0.35; 0.61; 0.66; 0.95; 0.98; 1" dur="10s" repeatCount="indefinite" />
-      <text x="88" y="0">[02/03] LIVE // Shipping DecayState (Strict accountability engine) — Signup portal live</text>
-    </g>
+      <!-- Phrase 2: DecayState -->
+      <g>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0; 0.330; 0.333; 0.655; 0.664; 1.0" dur="12s" repeatCount="indefinite" />
+        <text clip-path="url(#type-clip-2)" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="12" font-weight="600" fill="#bc8cff">
+          [02/03] LIVE // Shipping DecayState — Habit Accountability Engine
+        </text>
+      </g>
 
-    <!-- Feed 3: YOLOv11 & Computer Vision -->
-    <g font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="12" fill="#3fb950">
-      <animate attributeName="opacity" values="0;0;0;0;1;1;0;0" keyTimes="0; 0.63; 0.68; 0.93; 0.97; 0.99; 0.995; 1" dur="10s" repeatCount="indefinite" />
-      <text x="88" y="0">[03/03] RESEARCH // YOLOv11 Solar CME Detector &amp; MediaPipe Pose Estimation</text>
-    </g>
+      <!-- Phrase 3: Space Weather & Computer Vision -->
+      <g>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0; 0.664; 0.667; 0.985; 0.995; 1.0" dur="12s" repeatCount="indefinite" />
+        <text clip-path="url(#type-clip-3)" font-family="ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="12" font-weight="600" fill="#3fb950">
+          [03/03] RESEARCH // YOLOv11 Space Weather AI &amp; MediaPipe Pose AI
+        </text>
+      </g>
 
-    <!-- Blinking Cursor -->
-    <rect x="740" y="-10" width="7" height="13" fill="#58a6ff">
-      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
-    </rect>
+      <!-- Traveling Cursor (Synchronized with typing head + continuous blinking) -->
+      <rect y="-10" width="7" height="13" fill="#58a6ff">
+        <animate attributeName="x"
+                 values="0; 0; 430; 430; 0; 0; 0; 0; 445; 445; 0; 0; 0; 0; 445; 445; 0; 0"
+                 keyTimes="0; 0.017; 0.117; 0.267; 0.308; 0.330; 0.333; 0.350; 0.450; 0.600; 0.642; 0.664; 0.667; 0.683; 0.783; 0.933; 0.975; 1.0"
+                 dur="12s" repeatCount="indefinite" />
+        <animate attributeName="fill"
+                 values="#58a6ff; #58a6ff; #bc8cff; #bc8cff; #3fb950; #3fb950; #58a6ff"
+                 keyTimes="0; 0.32; 0.33; 0.65; 0.66; 0.98; 1.0"
+                 dur="12s" repeatCount="indefinite" />
+        <animate attributeName="opacity"
+                 values="1; 0; 1; 0; 1; 0; 1; 0; 1; 0; 1; 0; 1; 0; 1; 0; 1; 0; 1; 0; 1; 0; 1; 0"
+                 dur="12s" repeatCount="indefinite" />
+      </rect>
+    </g>
   </g>
 
   <!-- Bottom Static Rule Line -->
-  <line x1="48" y1="324" x2="952" y2="324" stroke="#30363d" stroke-width="1" />
-
-  <!-- Continuous Laser Scan on Bottom Rule (Opposite direction loop) -->
-  <line x1="1020" y1="324" x2="1120" y2="324" stroke="url(#laser-beam)" stroke-width="1.8">
-    <animate attributeName="x1" from="1020" to="-120" dur="4.5s" repeatCount="indefinite" />
-    <animate attributeName="x2" from="1120" to="-20" dur="4.5s" repeatCount="indefinite" />
-  </line>
+  <line x1="48" y1="320" x2="952" y2="320" stroke="#30363d" stroke-width="1" />
 </svg>
