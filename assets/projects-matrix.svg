@@ -1,4 +1,24 @@
 <svg viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace">
+  <defs>
+    <!-- Scanning Laser Gradient for Blueprint Grid -->
+    <linearGradient id="scan-laser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0" />
+      <stop offset="30%" stop-color="#58a6ff" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#58a6ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Radar Glow Filter -->
+    <filter id="radar-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
   <rect width="960" height="480" fill="#090d16"/>
 
   <!-- Outer Architectural Grid Frame -->
@@ -8,11 +28,23 @@
   <line x1="480" y1="20" x2="480" y2="460" stroke="#30363d" stroke-width="0.8"/>
   <line x1="32" y1="240" x2="928" y2="240" stroke="#30363d" stroke-width="0.8"/>
 
+  <!-- CONTINUOUS BLUEPRINT HUD SCANLINE (Smoothly sweeps vertically down across grid) -->
+  <line x1="32" x2="928" y1="20" y2="20" stroke="url(#scan-laser)" stroke-width="1.5" opacity="0.75">
+    <animate attributeName="y1" from="20" to="460" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="y2" from="20" to="460" dur="6s" repeatCount="indefinite" />
+  </line>
+
   <!-- ================= 01: TAGZZS (TOP-LEFT) ================= -->
   <g transform="translate(56, 44)">
-    <circle cx="-10" cy="-3" r="3" fill="#58a6ff">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    <!-- Animated Radar Pulse Beacon -->
+    <circle cx="-10" cy="-3" r="3" fill="#58a6ff" filter="url(#radar-glow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
     </circle>
+    <circle cx="-10" cy="-3" r="3" fill="none" stroke="#58a6ff" stroke-width="0.8">
+      <animate attributeName="r" values="3;9;3" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+
     <text x="0" y="0" font-size="11" fill="#58a6ff" letter-spacing="1">01 / FOUNDING VENTURE</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">Tagzzs — AI Second Brain</text>
     
@@ -44,9 +76,15 @@
 
   <!-- ================= 02: DECAYSTATE (TOP-RIGHT) ================= -->
   <g transform="translate(504, 44)">
-    <circle cx="-10" cy="-3" r="3" fill="#bc8cff">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/>
+    <!-- Animated Radar Pulse Beacon -->
+    <circle cx="-10" cy="-3" r="3" fill="#bc8cff" filter="url(#radar-glow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.2s" repeatCount="indefinite"/>
     </circle>
+    <circle cx="-10" cy="-3" r="3" fill="none" stroke="#bc8cff" stroke-width="0.8">
+      <animate attributeName="r" values="3;9;3" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
     <text x="0" y="0" font-size="11" fill="#bc8cff" letter-spacing="1">02 / FOUNDING VENTURE</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">DecayState — Protocol Engine</text>
     
@@ -78,9 +116,15 @@
 
   <!-- ================= 03: CURL-VISION (BOTTOM-LEFT) ================= -->
   <g transform="translate(56, 264)">
-    <circle cx="-10" cy="-3" r="3" fill="#3fb950">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/>
+    <!-- Animated Radar Pulse Beacon -->
+    <circle cx="-10" cy="-3" r="3" fill="#3fb950" filter="url(#radar-glow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.6s" repeatCount="indefinite"/>
     </circle>
+    <circle cx="-10" cy="-3" r="3" fill="none" stroke="#3fb950" stroke-width="0.8">
+      <animate attributeName="r" values="3;9;3" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+
     <text x="0" y="0" font-size="11" fill="#3fb950" letter-spacing="1">03 / COMPUTER VISION AI</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">CURL-Vision — Workout Coach</text>
     
@@ -112,9 +156,15 @@
 
   <!-- ================= 04: SOLARFLARE & CME (BOTTOM-RIGHT) ================= -->
   <g transform="translate(504, 264)">
-    <circle cx="-10" cy="-3" r="3" fill="#f2cc60">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
+    <!-- Animated Radar Pulse Beacon -->
+    <circle cx="-10" cy="-3" r="3" fill="#f2cc60" filter="url(#radar-glow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
     </circle>
+    <circle cx="-10" cy="-3" r="3" fill="none" stroke="#f2cc60" stroke-width="0.8">
+      <animate attributeName="r" values="3;9;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
     <text x="0" y="0" font-size="11" fill="#f2cc60" letter-spacing="1">04 / ASTROPHYSICAL AI RESEARCH</text>
     <text x="0" y="26" font-size="18" font-weight="700" fill="#f0f6fc" letter-spacing="0.2">Solarflare &amp; CME Detector</text>
     
